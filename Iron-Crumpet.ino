@@ -16,7 +16,6 @@
 #include "config_manager.h"
 #include "simhub_client_ws.h"
 #include "UI.h"
-#include "Orbitron_Regular_ttf.h"
 
 // -----------------------------------------------------------------------------
 // Hardware Display Driver Instance
