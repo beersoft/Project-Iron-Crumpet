@@ -1,0 +1,1960 @@
+{
+  "DashboardDebugManager": {
+    "_dashSettingsStores": {},
+    "WindowPositionSettings": {
+      "IsFullScreen": false,
+      "Position": "156,156,800,480",
+      "TopMost": false,
+      "AllowTransparency": false,
+      "CloseOnMonitorLoss": false,
+      "NoWindowActivate": false
+    }
+  },
+  "Version": 2,
+  "Id": "af345a90-49ae-44da-aa6a-811daf5a30e8",
+  "BaseHeight": 480,
+  "BaseWidth": 800,
+  "BackgroundColor": "#FF000000",
+  "Screens": [
+    {
+      "RenderingSkip": 0,
+      "Name": "Screen 0",
+      "InGameScreen": true,
+      "IdleScreen": true,
+      "PitScreen": false,
+      "ScreenId": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+      "AllowOverlays": true,
+      "IsForegroundLayer": false,
+      "IsOverlayLayer": false,
+      "OverlayTriggerExpression": {
+        "Expression": ""
+      },
+      "ScreenEnabledExpression": {
+        "Expression": ""
+      },
+      "OverlayMaxDuration": 0,
+      "OverlayMinDuration": 0,
+      "IsBackgroundLayer": false,
+      "BackgroundColor": "#FF000000",
+      "Items": [
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 10.0,
+          "Top": 10.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "Speed",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([SpeedLocal], isnull([SpeedKmh], 0))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 108.0,
+          "Top": 10.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "RPM",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([Rpms], 0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "N",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 206.0,
+          "Top": 10.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "Gear",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([Gear], 'N')"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "00:00:00",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 304.0,
+          "Top": 10.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "CurrentLapTime",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([CurrentLapTime], '00:00:00')"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.00",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 402.0,
+          "Top": 10.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "DeltaToBest",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([PersistantTrackerPlugin.SessionBestLiveDeltaSeconds], isnull([DeltaToSessionBest], 0.0))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "00:00:00",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 500.0,
+          "Top": 10.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "LastLapTime",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([LastLapTime], '00:00:00')"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "00:00:00",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 598.0,
+          "Top": 10.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "BestLapTime",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([BestLapTime], '00:00:00')"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 696.0,
+          "Top": 10.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "CurrentLap",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([CurrentLap], 0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 10.0,
+          "Top": 58.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "Position",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([Position], 0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 108.0,
+          "Top": 58.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "FuelPct",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([FuelPercent], [Fuel])"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 206.0,
+          "Top": 58.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "BrakeBias",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([BrakeBias], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 304.0,
+          "Top": 58.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "TCLevel",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([TCLevel], 0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 402.0,
+          "Top": 58.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "ABSLevel",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([ABSLevel], 0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 500.0,
+          "Top": 58.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "EngineMap",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([EngineMap], 0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 598.0,
+          "Top": 58.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "PitLimiterOn",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([PitLimiterOn], 0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 696.0,
+          "Top": 58.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "TyrePressureFL",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([TyrePressureFrontLeft], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 10.0,
+          "Top": 106.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "TyrePressureFR",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([TyrePressureFrontRight], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 108.0,
+          "Top": 106.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "TyrePressureRL",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([TyrePressureRearLeft], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 206.0,
+          "Top": 106.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "TyrePressureRR",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([TyrePressureRearRight], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 304.0,
+          "Top": 106.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "TyreTempFL",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([TyreTemperatureFrontLeft], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 402.0,
+          "Top": 106.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "TyreTempFR",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([TyreTemperatureFrontRight], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 500.0,
+          "Top": 106.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "TyreTempRL",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([TyreTemperatureRearLeft], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 598.0,
+          "Top": 106.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "TyreTempRR",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([TyreTemperatureRearRight], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 696.0,
+          "Top": 106.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "BrakeTempFL",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([BrakeTemperatureFrontLeft], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 10.0,
+          "Top": 154.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "BrakeTempFR",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([BrakeTemperatureFrontRight], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 108.0,
+          "Top": 154.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "BrakeTempRL",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([BrakeTemperatureRearLeft], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 206.0,
+          "Top": 154.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "BrakeTempRR",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([BrakeTemperatureRearRight], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "8000",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 304.0,
+          "Top": 154.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "MaxRPM",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([MaxRpm], isnull([CarSettings_CurrentDisplayedRPMPercent], 8000))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 402.0,
+          "Top": 154.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "Headlights",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([Headlights], 0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 500.0,
+          "Top": 154.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "AirTemp",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([AirTemperature], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 598.0,
+          "Top": 154.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "WaterTemp",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([WaterTemperature], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 696.0,
+          "Top": 154.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "OilTemp",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([OilTemperature], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 10.0,
+          "Top": 202.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "OilPressure",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([OilPressure], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 108.0,
+          "Top": 202.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "FuelPressure",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([FuelPressure], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 206.0,
+          "Top": 202.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "RoadTemp",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([RoadTemperature], 0.0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "None",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 304.0,
+          "Top": 202.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "Flag",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([Flag_Yellow] ? 'Yellow' : (isnull([Flag_Green] ? 'Green' : (isnull([Flag_Blue] ? 'Blue' : [Flag])))), 'None')"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 402.0,
+          "Top": 202.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "TCSlip",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([TractionControlSlipAngleMap], 0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 500.0,
+          "Top": 202.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "TCCut",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([TractionControlPowerCutMap], 0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "Race",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 598.0,
+          "Top": 202.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "SessionType",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([SessionTypeName], 'Race')"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 696.0,
+          "Top": 202.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "TotalLaps",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([TotalLaps], 0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 10.0,
+          "Top": 250.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "TCActive",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([TCActive], 0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 108.0,
+          "Top": 250.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "ABSActive",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([ABSActive], 0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 206.0,
+          "Top": 250.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "Flash",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([HighBeamFlash], 0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 304.0,
+          "Top": 250.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "Wipers",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([WipersOn], 0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 402.0,
+          "Top": 250.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "TurnLeft",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([TurnIndicatorLeft], 0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 500.0,
+          "Top": 250.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "TurnRight",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([TurnIndicatorRight], 0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 598.0,
+          "Top": 250.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "SpotterLeft",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "(isnull([SpotterCarLeft], 0) > 0 || isnull([RadarPlugin.CarLeft_Overlap], 0) > 0) ? 1 : 0"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 696.0,
+          "Top": 250.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "SpotterRight",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "(isnull([SpotterCarRight], 0) > 0 || isnull([RadarPlugin.CarRight_Overlap], 0) > 0) ? 1 : 0"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "12.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 10.0,
+          "Top": 298.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "OpponentBehindDist",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "abs(isnull([RadarPlugin.CarBehind_01_Distance], isnull([DataCorePlugin.GameData.OpponentBehindDistance], isnull([OpponentBehindDistance], 12.0))))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.00",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 108.0,
+          "Top": 298.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "OpponentBehindGap",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([DataCorePlugin.GameData.OpponentBehindGap], isnull([OpponentBehindGap], 0.0))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "1.80",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 206.0,
+          "Top": 298.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "OpponentBehindOffset",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([RadarPlugin.CarBehind_01_LateralOffset], isnull([OpponentBehindLateralOffset], 1.80))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.000",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 304.0,
+          "Top": 298.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "RoadCurvature",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([GameRawData.Physics.roadCurvature], isnull([RoadCurvature], 0.0))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 402.0,
+          "Top": 298.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "OpponentBehindSpeed",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([RadarPlugin.CarBehind_01_SpeedKmh], isnull([OpponentBehindSpeed], 0.0))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 20.0,
+          "Text": "20.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 500.0,
+          "Top": 298.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "OpponentAheadDist",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "abs(isnull([RadarPlugin.CarAhead_01_Distance], isnull([DataCorePlugin.GameData.OpponentAheadDistance], isnull([OpponentAheadDistance], 20.0))))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.00",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 598.0,
+          "Top": 298.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "OpponentAheadGap",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([DataCorePlugin.GameData.OpponentAheadGap], isnull([OpponentAheadGap], 0.0))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 696.0,
+          "Top": 298.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "TrackPosPct",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([DataCorePlugin.GameData.TrackPositionPercent], isnull([TrackPositionPercent], isnull([GameRawData.CurrentPlayerTelemetry.mTrackLocationNorm], 0.0)))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 10.0,
+          "Top": 346.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "ERSCharge",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([ERSPercent], isnull([CarSettings_CurrentDisplayedBatteryCharge], isnull([Battery], 0.0)))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 108.0,
+          "Top": 346.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "ERSMode",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([ERSDeploymentMode], isnull([CarSettings_CurrentDisplayedERS_Mode], 0))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 206.0,
+          "Top": 346.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "MGUKRecovery",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([CarSettings_CurrentDisplayedMGU_K_Recovery], isnull([MGUK_Recovery], 0))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 304.0,
+          "Top": 346.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "MGUKDelivery",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([CarSettings_CurrentDisplayedMGU_K_Delivery], isnull([MGU_K_Delivery], 0))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "0.0",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 402.0,
+          "Top": 346.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "ERSLapDeployed",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([CarSettings_CurrentDisplayedERS_LapDeployed], isnull([ERSLapDeployed], 0.0))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "SHITBOX",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 500.0,
+          "Top": 346.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "CarClass",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([CarClass], isnull([CarCategory], 'SHITBOX'))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "None",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 598.0,
+          "Top": 346.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "GameName",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([GameName], 'None')"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Segoe UI",
+          "FontSize": 14.0,
+          "Text": "None",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 42.0,
+          "Left": 696.0,
+          "Top": 346.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "CarModel",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Text": {
+              "Formula": {
+                "Expression": "isnull([CarModel], isnull([CarName], 'None'))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RadarItem, SimHub.Plugins",
+          "PlayerStyle": {
+            "LabelFont": "Segoe UI",
+            "LabelFontSize": 14.0,
+            "LabelColor": "#FFFFFFFF",
+            "DotColor": "#FFFF0000",
+            "DotBorderThickness": 0.0,
+            "DotBordercolor": "#FFFFFFFF",
+            "DotRadius": 40.0
+          },
+          "OpponentStyle": {
+            "LabelFont": "Segoe UI",
+            "LabelFontSize": 14.0,
+            "LabelColor": "#FFFFFFFF",
+            "DotColor": "#FFFFFFFF",
+            "DotBorderThickness": 0.0,
+            "DotBordercolor": "#FFFFFFFF",
+            "DotRadius": 30.0
+          },
+          "UseSmoothedPlayerAngle": true,
+          "Scale": 0.5,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 80.0,
+          "Left": 10.0,
+          "Top": 394.0,
+          "Visible": true,
+          "BlinkPhasisInverted": false,
+          "Width": 90.0,
+          "Name": "RadarItem",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.GeneratedMapItem, SimHub.Plugins",
+          "Name": "GeneratedMapItem",
+          "Left": 108.0,
+          "Top": 394.0,
+          "Width": 188.0,
+          "Height": 80.0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "BackgroundColor": "#00FFFFFF",
+          "Visible": true,
+          "DisplayScale": 1.0,
+          "BaseMapScale": 1.2,
+          "SpeedUnzoomEnabled": true,
+          "SpeedUnzoomStartSpeed": 60.0,
+          "SpeedUnzoomPercent": 50.0,
+          "AlternateTrackSectorColor": "#FF000000",
+          "CursorColor": "#FFFF0000",
+          "MapShadow": true,
+          "OverrideColorsWithCarClassColors": true,
+          "DisplayPerClassPosition": false,
+          "KeepMapDefinedClassColorsInSingleClass": true,
+          "DisableAutomaticPlayerClassStyle": false,
+          "MinimumTrackBorderWidth": 0.0,
+          "MinimumTrackWidth": 5.0,
+          "OpponentStyle": {
+            "LabelFont": "Segoe UI",
+            "LabelFontSize": 14.0,
+            "LabelColor": "#FFFFFFFF",
+            "DotColor": "#FFFFFFFF",
+            "DotBorderThickness": 2.0,
+            "DotBordercolor": "#FF000000",
+            "DotRadius": 30.0
+          },
+          "PlayerStyle": {
+            "LabelFont": "Segoe UI",
+            "LabelFontSize": 14.0,
+            "LabelColor": "#FFFFFFFF",
+            "DotColor": "#FFFF0000",
+            "DotBorderThickness": 4.0,
+            "DotBordercolor": "#FFFFFFFF",
+            "DotRadius": 30.0
+          },
+          "RenderImageHeight": 446.06224992361592,
+          "RenderImageWidth": 626.08737321117394,
+          "StartLine": {
+            "Color": "#FFFF0000",
+            "Enabled": true,
+            "Height": 40.0,
+            "Width": 5.0
+          },
+          "TrackBorderColor": "#FFFFFFFF",
+          "TrackBorderWidth": 2.0,
+          "TrackColor": "#FF000000",
+          "TrackWidth": 10.0,
+          "BlinkPhasisInverted": false,
+          "RenderingSkip": 0
+        }
+      ],
+      "MinimumRefreshIntervalMS": 0.0
+    }
+  ],
+  "SnapToGrid": false,
+  "HideLabels": false,
+  "ShowForeground": true,
+  "ForegroundOpacity": 100.0,
+  "ShowBackground": true,
+  "BackgroundOpacity": 100.0,
+  "ShowBoundingRectangles": false,
+  "GridSize": 10,
+  "Images": [],
+  "Metadata": {
+    "SettingsBuilder": {
+      "Settings": [],
+      "IsEditMode": false
+    },
+    "ScreenCount": 0.0,
+    "InGameScreensIndexs": [],
+    "IdleScreensIndexs": [],
+    "MainPreviewIndex": 0,
+    "IsOverlay": false,
+    "OverlaySizeWarning": false,
+    "MetadataVersion": 0.0,
+    "EnableOnDashboardMessaging": false,
+    "PitScreensIndexs": [],
+    "PreferredTouchMode": 0,
+    "Width": 0.0,
+    "Height": 0.0,
+    "DashboardVersion": ""
+  },
+  "ShowOnScreenControls": true,
+  "IsOverlay": false,
+  "EnableClickThroughOverlay": true,
+  "EnableOnDashboardMessaging": true,
+  "UseStrictJSIsolation": true,
+  "UseStrictJSIsolationWarning": true
+}

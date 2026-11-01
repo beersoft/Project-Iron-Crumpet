@@ -1,0 +1,32 @@
+default_profile: elecrow_basic
+
+profiles:
+  # ===========================================================================
+  # 1. Elecrow Basic 5.0" (DIS07050H)
+  #    - Octal-SPI (OPI) PSRAM
+  #    - 16MB Flash, 240MHz CPU
+  # ===========================================================================
+  elecrow_basic:
+    fqbn: esp32:esp32:esp32s3:CDCOnBoot=default,MSync=none,UploadMode=default,CPUFreq=240,FlashMode=qio,FlashSize=16M,PartitionScheme=huge_app,PSRAM=opi
+    custom_build_properties:
+      build.extra_flags: "-DBOARD_ELECROW_DIS07050H"
+
+  # ===========================================================================
+  # 2. Elecrow Advance 5.0" (DIS02050A)
+  #    - Octal-SPI (OPI) PSRAM
+  #    - 16MB Flash, 240MHz CPU
+  # ===========================================================================
+  elecrow_advance:
+    fqbn: esp32:esp32:esp32s3:CDCOnBoot=default,MSync=none,UploadMode=default,CPUFreq=240,FlashMode=qio,FlashSize=16M,PartitionScheme=huge_app,PSRAM=opi
+    custom_build_properties:
+      build.extra_flags: "-DBOARD_ELECROW_DIS02050A"
+
+  # ===========================================================================
+  # 3. Sunton 4.3" 800x480 (ESP32-8048S043)
+  #    - Quad-SPI (QSPI) PSRAM (crucial for Sunton; OPI will fail allocation)
+  #    - 16MB Flash, 240MHz CPU
+  # ===========================================================================
+  sunton_43:
+    fqbn: esp32:esp32:esp32s3:CDCOnBoot=default,MSync=none,UploadMode=default,CPUFreq=240,FlashMode=qio,FlashSize=16M,PartitionScheme=huge_app,PSRAM=qspi
+    custom_build_properties:
+      build.extra_flags: "-DBOARD_SUNTON_ESP32_8048S043"
