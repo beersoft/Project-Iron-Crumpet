@@ -25,61 +25,6 @@ LGFX gfx;
 // Dedicated SPI bus instance for SD card operations
 SPIClass sd_spi = SPIClass(FSPI);
 
-// -----------------------------------------------------------------------------
-// Class: MemoryFontWrapper
-// Description: Streams raw TTF bytes from PROGMEM flash to LovyanGFX on the fly.
-// -----------------------------------------------------------------------------
-class MemoryFontWrapper : public lgfx::v1::DataWrapper {
-    const uint8_t* data;
-    size_t len;
-    size_t pos;
-public:
-    MemoryFontWrapper(const uint8_t* ptr, size_t length) : data(ptr), len(length), pos(0) {}
-
-    bool open(const char* path) override { pos = 0; return true; }
-    void close() override {}
-    
-    int read(uint8_t *buf, uint32_t length) override {
-        if (pos >= len) return 0;
-        if (pos + length > len) length = len - pos;
-        memcpy_P(buf, data + pos, length);
-        pos += length;
-        return length;
-    }
-
-    void skip(int32_t offset) override {
-        pos += offset;
-        if (pos > len) pos = len;
-        if (pos < 0) pos = 0;
-    }
-
-    bool seek(uint32_t offset) override {
-        if (offset > len) return false;
-        pos = offset;
-        return true;
-    }
-
-    int32_t tell(void) override { return pos; }
-};
-
-// -----------------------------------------------------------------------------
-// Function: setup_custom_fonts
-// Description: Loads in-memory PROGMEM TrueType fonts into LovyanGFX for
-//              smooth, anti-aliased font rendering via memory stream.
-// -----------------------------------------------------------------------------
-void setup_custom_fonts() {
-    Serial.println("[FONT] Loading TTF font from flash via memory wrapper...");
-
-    static MemoryFontWrapper font_wrapper(Orbitron_Regular_ttf, Orbitron_Regular_ttf_len);
-    bool success = gfx.loadFont(&font_wrapper, lgfx::v1::IFont::font_type_t::ft_ttf);
-
-    if (success) {
-        Serial.println("[FONT] SUCCESS: TTF loaded into LovyanGFX from flash memory!");
-    } else {
-        Serial.println("[FONT] ERROR: Failed to parse TTF from flash memory wrapper!");
-    }
-}
-// End of setup_custom_fonts
 
 // -----------------------------------------------------------------------------
 // Function: show_boot_splash
@@ -256,7 +201,7 @@ void setup() {
     gfx.setBrightness(255);
 
     // 3. Load Embedded TrueType Fonts via Memory Wrapper
-    setup_custom_fonts(); 
+   // setup_custom_fonts(); 
 
     // 4. Display Beersoft Interactive Boot Screen
     show_boot_splash();

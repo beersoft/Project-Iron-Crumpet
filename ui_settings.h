@@ -1,24 +1,45 @@
-#ifndef UI_SETTINGS_H
-#define UI_SETTINGS_H
+#pragma once
 
 #include <Arduino.h>
+#define LGFX_USE_V1
+#include <LovyanGFX.hpp>
 
-// JetBrains Mono VLW font paths stored in LittleFS
-#define FONT_JB_MONO_12  "/JetBrainsMono_12.vlw"
-#define FONT_JB_MONO_16  "/JetBrainsMono_16.vlw"
-#define FONT_JB_MONO_20  "/JetBrainsMono_20.vlw"
-#define FONT_JB_MONO_28  "/JetBrainsMono_28.vlw"
-#define FONT_JB_MONO_48  "/JetBrainsMono_48.vlw"
-#define FONT_JB_MONO_72  "/JetBrainsMono_72.vlw"
-
-// UI Global Settings & Theme Defaults
-struct UISettings {
-    uint16_t primaryColor   = 0xFFFF; // White
-    uint16_t secondaryColor = 0x07E0; // Green
-    uint16_t backgroundColor= 0x0000; // Black
-    const char* activeFont  = FONT_JB_MONO_20;
+// =============================================================================
+// Dashboard Pages Enum
+// =============================================================================
+enum DashboardPage {
+    PAGE_RACE = 0,
+    PAGE_DRIVE,
+    PAGE_TYRES,
+    PAGE_TIMING,
+    PAGE_TELEMETRY,
+    PAGE_F1,
+    PAGE_DIALS,
+    TOTAL_PAGES
 };
 
-extern UISettings uiSettings;
+// -----------------------------------------------------------------------------
+// Global UI Theme Colors
+// -----------------------------------------------------------------------------
+#define DASH_BG_GLOBAL      0x0A2B  // Dark slate base
+#define DASH_GRID_LINE      0x18E3  // Matrix background grid line
+#define DASH_CARD_BG        0x1084  // Inner card background
+#define DASH_CARD_BORDER    0x52AA  // Crisp card boundary
+#define DASH_TEXT_SLATE     0x7BEF  // Inactive / secondary text
 
-#endif // UI_SETTINGS_H
+// -----------------------------------------------------------------------------
+// Typography Presets (Native FreeSansBold Tiers)
+// -----------------------------------------------------------------------------
+#define DASH_FONT_LABEL      &fonts::FreeSansOblique12pt7b  // Slanted vector for card headers
+#define DASH_FONT_DATA       nullptr                        // Uses smooth Orbitron TTF
+#define DASH_FONT_HERO       nullptr                        // Uses smooth Orbitron TTF
+#define DASH_FONT_NUM        nullptr                        // Uses smooth Orbitron TTF
+// -----------------------------------------------------------------------------
+// UI Full-Screen Grid Geometry (800x480: 16 Columns x 10 Rows @ 48x48)
+// -----------------------------------------------------------------------------
+#define GRID_MARGIN_LEFT    16
+#define GRID_MARGIN_TOP     0
+#define GRID_CELL_WIDTH     48
+#define GRID_CELL_HEIGHT    48
+#define GRID_COLS           16
+#define GRID_ROWS           10
